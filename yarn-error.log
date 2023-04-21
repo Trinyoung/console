@@ -1,0 +1,27 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\yarn\bin\yarn.js add react-router-dom
+
+PATH: 
+  C:\Users\luqingyang\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\luqingyang\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;%NVM_HOME%;%NVM_SYMLINK%;C:\Program Files\Git\cmd;C:\Users\luqingyang\AppData\Local\Programs\Python\Python39\Scripts;C:\Users\luqingyang\AppData\Local\Programs\Python\Python39;C:\Users\luqingyang\AppData\Local\Microsoft\WindowsApps;C:\program files\esafenet\cobra docguard client;C:\Users\luqingyang\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\luqingyang\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\luqingyang\AppData\Local\Programs\Fiddler;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  14.17.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: connect ETIMEDOUT 192.168.120.38:80
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1146:16)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
