@@ -3,9 +3,12 @@ import App from "./App.vue";
 import routes from "./router";
 import store from "./store";
 import VueRouter from "vue-router";
-
+import ElementUI from "element-ui";
+import "element-ui/lib/theme-chalk/index.css";
 Vue.config.productionTip = false;
 Vue.use(VueRouter);
+Vue.use(ElementUI);
+
 if (window.__POWERED_BY_QIANKUN__) {
   window.__webpack_public_path__ = window.__INJECTED_PUBLIC_PATH_BY_QIANKUN__;
 }
@@ -14,7 +17,7 @@ let instance = null;
 function render(props = {}) {
   const { container } = props;
   router = new VueRouter({
-    base: window.__POWERED_BY_QIANKUN__ ? "/app-vue/" : "/",
+    base: window.__POWERED_BY_QIANKUN__ ? "/nvwa" : "/",
     mode: "history",
     routes,
   });

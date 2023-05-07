@@ -5,6 +5,7 @@ import store from "./store";
 import { registerMicroApps, start } from "qiankun";
 // import ElementUI from "element-ui";
 import element from "element-ui";
+import "element-ui/lib/theme-chalk/index.css";
 
 Vue.config.productionTip = false;
 Vue.use(element);

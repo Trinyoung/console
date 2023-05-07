@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import HomeView from "../views/HomeView.vue";
+// import HomeView from "../views/HomeView.vue";
 import Dashbord from "../views/dashbord/index.vue";
 
 Vue.use(VueRouter);
@@ -9,7 +9,17 @@ const routes = [
   {
     path: "/",
     name: "home",
-    component: HomeView,
+    component: () => import("../views/HomeView.vue"),
+  },
+  {
+    path: "/login",
+    name: "login",
+    component: () => import("../views/login.vue"),
+  },
+  {
+    path: "/register",
+    name: "register",
+    component: () => import("../views/register.vue"),
   },
   {
     path: "/about",
