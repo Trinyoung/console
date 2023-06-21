@@ -2,15 +2,15 @@
   <main
     class="my-1 shadow-sm bg-white border height-100 console_article_container"
   >
-    <el-breadcrumb separator="/">
+    <el-breadcrumb separator="/" style="margin-bottom: 20px">
       <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
       <el-breadcrumb-item><a href="/">活动管理</a></el-breadcrumb-item>
       <el-breadcrumb-item>活动列表</el-breadcrumb-item>
       <el-breadcrumb-item>活动详情</el-breadcrumb-item>
     </el-breadcrumb>
     <div class="form-container border-bottom">
-      <el-form :inline="true" label-width="120px">
-        <el-row>
+      <el-form :inline="true" label-width="150px">
+        <el-row :gutter="20">
           <el-col :span="8">
             <el-form-item label="日期范围:">
               <el-date-picker
@@ -65,7 +65,10 @@
           </el-col>
           <el-col :span="8">
             <el-form-item label="关键字:">
-              <el-input v-model="searchInfo.keyword"></el-input>
+              <el-input
+                v-model="searchInfo.keyword"
+                placeholder="请输入关键字"
+              ></el-input>
             </el-form-item>
           </el-col>
           <el-col :span="20" style="text-align: right">
@@ -177,7 +180,16 @@
         </tbody>
       </table> -->
     </div>
-    <el-pagination></el-pagination>
+    <el-pagination
+      @size-change="handleSizeChange"
+      @current-change="handleCurrentChange"
+      :current-page="currentPage4"
+      :page-sizes="[100, 200, 300, 400]"
+      :page-size="100"
+      layout="total, sizes, prev, pager, next, jumper"
+      :total="400"
+    >
+    </el-pagination>
   </main>
 </template>
 <script>
@@ -189,7 +201,7 @@ export default {
   // components: {
   //   pagination,
   // },
-  data: function () {
+  data() {
     return {
       list: [],
       pages: 1,
@@ -201,6 +213,10 @@ export default {
         keyword: "",
         tag: "",
         isPublic: 0,
+      },
+      page: {
+        pageSize: 10,
+        pageIndex: 1,
       },
       options: [],
       tags: [],
@@ -240,6 +256,15 @@ export default {
     },
     getHotList: function () {
       return "";
+    },
+    handleSizeChange(val) {
+      this.page.pageSize = val;
+      this.page.pageIndex = 1;
+      this.getList();
+    },
+    handleCurrentChange(val) {
+      this.page.pageIndex = val;
+      this.getList();
     },
     async getList(page) {
       let queryString = `page=${page}&createdBy=${this.$route.params.uid}`;
@@ -312,15 +337,27 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.el-form-item {
+  display: flex !important;
+}
+:deep .el-form-item__content {
+  width: 100%;
+}
+.el-select {
+  width: 100% !important;
+}
 .console_article_container {
   padding: 10px;
 }
-::v-deep .el-form--inline {
+.el-cascader {
+  width: 100%;
+}
+:deep .el-form--inline {
   display: flex;
   margin-right: 0;
 }
 // .el-form-item
-::v-deep .el-form-item_content {
+:deep .el-form-item_content {
   flex: 1;
 }
 .form-container {
@@ -328,5 +365,8 @@ export default {
 }
 .btn-toolbar {
   text-align: right;
+}
+:deep .el-popper {
+  margin-top: 40px !important;
 }
 </style>
