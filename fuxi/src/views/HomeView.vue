@@ -43,10 +43,11 @@
         </el-aside>
         <el-container>
           <div id="nvwa"></div>
+          <!-- <div id="xingtian"></div> -->
         </el-container>
       </el-container>
     </el-container>
-    <div id="nvwa"></div>
+    <div id="xingtian"></div>
   </div>
 </template>
 

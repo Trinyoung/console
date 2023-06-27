@@ -7,6 +7,7 @@
     <!-- 编辑器 -->
     <div id="cangjie"></div>
     <div id="person"></div>
+    <div id="xingtian"></div>
     <!-- <div id=""></div> -->
   </div>
 </template>
@@ -18,7 +19,7 @@ export default {
   },
   data() {
     return {
-      applications: ["nvwa", "cangjie", "person"],
+      applications: ["nvwa", "cangjie", "xingtian"],
       // app: "",
     };
   },

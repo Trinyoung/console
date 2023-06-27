@@ -1,7 +1,7 @@
 ## 介绍
 console 项目是一个论坛系统， 是使用qiankun.js搭建的项目。主项目为fuxi(伏羲)；
 
-子应用由nvwa(女娲)，houyi(刑天)，cangjie(仓颉)；
+子应用由nvwa(女娲)，houyi(后羿)，xingtian(刑天)；
 
 fuxi(伏羲)： 乾坤的主应用, 技术栈为 vue2，es6， 负责登录， 注册，以及主应用的架子；
 

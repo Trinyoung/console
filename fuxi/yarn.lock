@@ -3534,6 +3534,17 @@ html-webpack-plugin@^5.1.0:
     pretty-error "^4.0.0"
     tapable "^2.0.0"
 
+html-webpack-plugin@^5.5.3:
+  version "5.5.3"
+  resolved "https://registry.npmjs.org/html-webpack-plugin/-/html-webpack-plugin-5.5.3.tgz#72270f4a78e222b5825b296e5e3e1328ad525a3e"
+  integrity sha512-6YrDKTuqaP/TquFH7h4srYWsZx+x6k6+FbsTm0ziCwGHDP78Unr1r9F/H4+sGmMbX08GQcJ+K64x55b+7VM/jg==
+  dependencies:
+    "@types/html-minifier-terser" "^6.0.0"
+    html-minifier-terser "^6.0.2"
+    lodash "^4.17.21"
+    pretty-error "^4.0.0"
+    tapable "^2.0.0"
+
 htmlparser2@^6.1.0:
   version "6.1.0"
   resolved "http://registry.npm.aikucun.xyz/htmlparser2/-/htmlparser2-6.1.0.tgz#c4d762b6c3371a05dbe65e94ae43a9f845fb8fb7"
@@ -3656,6 +3667,13 @@ import-html-entry@^1.14.0:
   version "1.14.0"
   resolved "http://registry.npm.aikucun.xyz/import-html-entry/-/import-html-entry-1.14.0.tgz#9a05928373bb7e9362cd8dd428a82387a87524ff"
   integrity sha512-CQQMV+2rxHCLMSXsajV1cjT1g6xi3ujMAPnGwR96xHaN5/JEVIOUGkM7LDRn73dk8E8NaHmOf3rvPPExPPe1xw==
+  dependencies:
+    "@babel/runtime" "^7.7.2"
+
+import-html-entry@^1.14.6:
+  version "1.14.6"
+  resolved "https://registry.npmjs.org/import-html-entry/-/import-html-entry-1.14.6.tgz#6bf54930e074d8264cbd040dcefb92062a3093d7"
+  integrity sha512-5MQkbwIr8n/bXOoE05M5/Nm0lnHO46vnb3D6svSvtVwpDqwhd/X14zjLcU31QWZ6gL8rUXNzj6vKHx4yOUL6gQ==
   dependencies:
     "@babel/runtime" "^7.7.2"
 
@@ -5698,6 +5716,11 @@ svgo@^2.7.0:
     csso "^4.2.0"
     picocolors "^1.0.0"
     stable "^0.1.8"
+
+systemjs-webpack-interop@^2.3.7:
+  version "2.3.7"
+  resolved "https://registry.npmjs.org/systemjs-webpack-interop/-/systemjs-webpack-interop-2.3.7.tgz#b8ed2a81c371bab3160ac4801776ef61cf8c7959"
+  integrity sha512-9wmhkleKWVjcGfHpc1/YvfADnvzpYMdr2/AM2e7FpMczPYEdluwM3AMXxHGzPUNbWfnSaerrmzqP4nDsTDvBxA==
 
 table@^6.0.9:
   version "6.8.1"
