@@ -23,6 +23,17 @@
         ></div>
         <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
           <el-menu>
+            <el-submenu index="0">
+              <template slot="title">
+                <i class="el-icon-document-copy"></i>菜单配置
+              </template>
+              <!-- <el-menu-item-group>
+                <el-menu-item>
+                  <i class="el-icon-document"></i>
+                  文章管理
+                </el-menu-item>
+              </el-menu-item-group> -->
+            </el-submenu>
             <el-submenu index="1">
               <template slot="title">
                 <i class="el-icon-document-copy"></i>文档管理
@@ -43,18 +54,18 @@
         </el-aside>
         <el-container>
           <div id="nvwa"></div>
-          <!-- <div id="xingtian"></div> -->
+          <div id="xingtian"></div>
+          <div id="houyi"></div>
+          <div>
+            <router-view></router-view>
+          </div>
         </el-container>
       </el-container>
     </el-container>
-    <div id="xingtian"></div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-// import HelloWorld from "@/components/HelloWorld.vue";
-
 export default {
   name: "HomeView",
   components: {

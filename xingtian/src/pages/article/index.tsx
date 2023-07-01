@@ -1,41 +1,30 @@
-import React, { useState } from 'react'
+import React, { useState, createContext } from 'react'
 // import { ECharts } from 'echarts'
-import * as echarts from 'echarts'
-import { useEffect } from 'react'
-import cls from './article.module.less'
 
+import cls from './article.module.less'
+import OuterContext from './components/outerContext'
+import Inner from './components/inner'
+import Histogram from './components/Histogram'
+import Box from './components/box'
 const ArticleStastics = () => {
-   
-    const option = {
-        xAxis: {
-            type: 'category',
-            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-          },
-          yAxis: {
-            type: 'value'
-          },
-          series: [
-            {
-              data: [120, 200, 150, 80, 70, 110, 130],
-              type: 'bar',
-              showBackground: true,
-              backgroundStyle: {
-                color: 'rgba(180, 180, 180, 0.2)'
-              }
-            }
-          ]
-    }
-    useEffect(() => {
-        const chartDom = document.getElementById('main')
-        const myChart = echarts.init(chartDom!)
-        myChart.setOption(option)
-    })
+    // const OuterContext = createContext({name: 'lqy'});
+    
     
     return (<>
-            <div id='main' className={cls.main}>
-                12345
-            </div>
-        </>)
+        <OuterContext.Provider value={{name: 'lqy'}}>
+          <div className={cls.main}>
+            21345
+          </div>
+          <Box>
+            <Histogram></Histogram>
+          </Box>
+          
+          {/* <div id='main' className={cls.main}>
+          </div> */}
+          <Inner></Inner>
+          <div id=''></div>
+        </OuterContext.Provider>
+      </>)
 }
 
 export default ArticleStastics
